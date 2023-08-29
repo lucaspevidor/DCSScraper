@@ -7,7 +7,7 @@ import colorama
 def NotifyModulesOnSale(modules):
     notificationText = ''
     for module in modules:
-        if (module.currentPrice >= module.notifiedPrice):
+        if (module.currentPrice >= module.notifiedPrice and module.notifiedPrice > 0):
             continue
 
         notificationText += f"**{module.name}** is on sale!\n"
